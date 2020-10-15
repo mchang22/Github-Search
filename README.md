@@ -16,7 +16,7 @@ Follow the following steps to setup and run the apps on your local:
 ## Demo GIFs
 
 <p align="center">
-<img src="src/ezgif.com-gif-maker.gif" width="400">
+<img src="src/ezgif.com-gif-maker.gif" width="500">
 </p>
 
 ### Dependencies
