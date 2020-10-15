@@ -4,8 +4,8 @@ import "./Following.scss";
 
 const Following = (props) => {
   const [displayList, setDisplayList] = useState([]);
-
   const { userFollowingList } = props;
+
   let total = userFollowingList.length;
   const displayListSizeRef = useRef(10);
 

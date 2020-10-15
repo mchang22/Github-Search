@@ -46,7 +46,7 @@ function App() {
       .catch((err) => {
         setError(err);
         setGithubUser(null);
-        setUserFollowingList(null);
+        setUserFollowingList([]);
         setUserRepos(null);
       });
   };
