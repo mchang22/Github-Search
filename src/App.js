@@ -1,24 +1,26 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-
+import Header from "./components/Header/Header";
+import Following from "./components/Following/Following";
+import Repos from "./components/Repos/Repos";
+import { Switch, Route, Redirect } from "react-router-dom";
+import Home from "./components/Home/Home";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn !!
-        </a>
-      </header>
+      <Header></Header>
+
+      <Switch>
+        <Route exact path="/" render={() => <Redirect to="/home" />} />
+        <Route path="home">
+          <Home />
+        </Route>
+        <Route path="following">
+          <Following />
+        </Route>
+        <Route path="repos">
+          <Repos />
+        </Route>
+      </Switch>
     </div>
   );
 }
